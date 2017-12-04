@@ -7,6 +7,9 @@
         xmlns:ViewModel="clr-namespace:CodingDojo4.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
@@ -22,14 +25,14 @@
                 <ColumnDefinition Width="110"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Label Content="Username:" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <TextBox VerticalAlignment="Center" Height="25" Grid.Column="1"></TextBox>
-            <Button Content="Connect" Grid.Column="3" VerticalAlignment="Center" Margin="5,0,5,0" Height="30"></Button>
+            <TextBox VerticalAlignment="Center" Height="25" Grid.Column="1" Text="{Binding ChatName}"></TextBox>
+            <Button Content="Connect" Grid.Column="3" VerticalAlignment="Center" Margin="5,0,5,0" Height="30" Command="{Binding ConnectBtnClickCmd}"></Button>
         </Grid>
         <Grid Grid.Row="1">
-            <Label Content="Messages" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"></Label>
+            <Label Content="Messages" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0" ></Label>
         </Grid>
         <Grid Grid.Row="2">
-            <ListBox Margin="10"></ListBox>
+            <ListBox Margin="10" ItemsSource="{Binding ReceivedMessages}"></ListBox>
         </Grid>
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
@@ -38,8 +41,8 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>                    
             </Grid.ColumnDefinitions>
             <Label Content="Messages" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <TextBox Grid.Column="1" Height="25" VerticalAlignment="Center" Margin="0,0,25,0"></TextBox>
-            <Button Grid.Column="2" Content="Send Message" VerticalAlignment="Center" Height="30" Margin="13,0,20,0"></Button>
+            <TextBox Grid.Column="1" Height="25" VerticalAlignment="Center" Margin="0,0,25,0" Text="{Binding Message, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Button Grid.Column="2" Content="Send Message" VerticalAlignment="Center" Height="30" Margin="13,0,20,0" Command="{Binding SendBtnClickCmd}"></Button>
         </Grid>
     </Grid>
 </Window>
