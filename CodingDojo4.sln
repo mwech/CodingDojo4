@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingDojo4", "CodingDojo4\CodingDojo4.csproj", "{A40E0156-458A-4DF7-AF33-927CC9B90EB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A40E0156-458A-4DF7-AF33-927CC9B90EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40E0156-458A-4DF7-AF33-927CC9B90EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40E0156-458A-4DF7-AF33-927CC9B90EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40E0156-458A-4DF7-AF33-927CC9B90EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3DDECD3-75A3-4357-BD79-FE5E3EFED1B9}
+	EndGlobalSection
+EndGlobal
