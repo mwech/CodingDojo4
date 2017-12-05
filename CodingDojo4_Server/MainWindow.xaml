@@ -7,6 +7,50 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Start" Width="100" Height="30" Margin="0,0,10,0" VerticalAlignment="Center"></Button>
+                <Button Content="Stop" Width="100" Height="30"  Margin="0,0,10,0" VerticalAlignment="Center"></Button>
+            </StackPanel>            
+        </Grid>
+        <Grid Grid.Row="1">
+            <TabControl Margin="10,0,10,0">
+                <TabItem Header="Chat">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="257.5"></ColumnDefinition>
+                            <ColumnDefinition Width="257.5"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            <Label Content="Connected Users:" VerticalAlignment="Center"></Label>
+                        </Grid>
+                        <Grid Grid.Row="0" Grid.Column="1">
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Received Messages: " VerticalAlignment="Center"></Label>
+                                <Label VerticalAlignment="Center" Width="20" Height="20"></Label>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <ListBox Margin="10,0,10,0"></ListBox>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <ListBox Margin="10,0,40,0"></ListBox>
+                        </Grid>
+                        <Grid Grid.Row="2" Grid.Column="0">
+                            <Button Margin="10,5,10,5" Width="100"  Content="Drop"></Button>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>
