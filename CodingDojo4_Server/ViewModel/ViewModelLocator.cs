@@ -12,6 +12,7 @@
   See http://www.galasoft.ch/mvvm
 */
 
+using CodingDojo4_Server.ViewModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;

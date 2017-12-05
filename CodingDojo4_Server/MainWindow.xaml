@@ -44,7 +44,7 @@
                             </StackPanel>
                         </Grid>
                         <Grid Grid.Row="1" Grid.Column="0">
-                            <ListBox Margin="10,0,10,0" ItemsSource="{Binding Users}"></ListBox>
+                            <ListBox Margin="10,0,10,0" ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}"></ListBox>
                         </Grid>
                         <Grid Grid.Row="1" Grid.Column="1">
                             <ListBox Margin="10,0,40,0" ItemsSource="{Binding Messages}"></ListBox>
