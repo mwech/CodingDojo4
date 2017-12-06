@@ -37,7 +37,7 @@ namespace CodingDojo4_Server
         {
             string message = "";
             //as long as the client receives no message that he must be disconnected from server
-            while (!message.Equals(endMessage))
+            while (!message.Contains(endMessage))
             {
                 //determine the length of the received byte message
                 int length = Clientsocket.Receive(buffer);

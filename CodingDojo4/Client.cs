@@ -51,7 +51,7 @@ namespace CodingDojo4
         {
             string message = "";
             //As long as server does not disconnect the client
-            while (!message.Equals("@quit"))
+            while (!message.Contains("@quit"))
             {
                 //Getting the length of the message
                 int length = clientsocket.Receive(buffer);

@@ -96,6 +96,12 @@ namespace CodingDojo4_Server.ViewModel
                     //not in list => add it
                     Users.Add(name);
                 }
+                //check if disconnect message received
+				if (message.Contains("@quit"))
+                {
+                    //disconnect one specific client by his name
+                    server.DisconnectSpecificClient(name); 
+                }
                 //write message
                 Messages.Add(message);
                 //do this to inform the GUI about the update of the received message counter!
